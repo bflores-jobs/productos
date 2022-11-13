@@ -15,4 +15,5 @@ function callOtherDomain(){
       invocation.onreadystatechange = handler;
       invocation.send(body);
     }
+    console.log(invocation);
 }

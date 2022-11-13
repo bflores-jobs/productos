@@ -1,6 +1,6 @@
-//document.addEventListener('DOMContentLoaded', () => {
-//    callOtherDomain()
-//})
+document.addEventListener('DOMContentLoaded', () => {
+    callOtherDomain()
+})
 
 var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/post-here/';

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetchData()
+    callOtherDomain()
 })
 
 var invocation = new XMLHttpRequest();

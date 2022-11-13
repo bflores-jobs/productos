@@ -4,14 +4,10 @@ _El objetivo de esta  aplicación es mostrar los stock de productos._
 _Para esto cree un sitio WEB que consulta una API con los stock de productos, estos pueden ser consultados por categoría, nombre o número de producto. También es posible hacer una consulta combinada entre categoría  y nombre._
 
 ## Herramientas 🔧
-
-* _Spring Tool Suite_
-* _Maven_
 * _Visual Studio Code_
-* _MySQL_
 * _GIT_
 * _Github_
-* Heroku
+* _Heroku_
 
 ## Lenguages 🛠️
 * _Vanilla JavaScript _

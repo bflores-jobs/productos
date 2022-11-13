@@ -2,8 +2,8 @@
 //    callOtherDomain()
 //})
 
-fetch("https://victim.example/naïve-endpoint", {
-  method: "POST",
+fetch("https://productos-produceapirest.herokuapp.com/api/v1/productos", {
+  method: "GET",
   headers: [
     ["Content-Type", "application/json"],
     ["Content-Type", "text/plain"]

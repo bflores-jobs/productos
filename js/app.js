@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+var url = 'https://productos-produceapirest.herokuapp.com/api/v1/productos';
 
 function callOtherDomain() {
   if(invocation) {

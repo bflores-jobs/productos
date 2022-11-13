@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-    callOtherDomain()
-})
+//document.addEventListener('DOMContentLoaded', () => {
+//    callOtherDomain()
+//})
 
 var invocation = new XMLHttpRequest();
 var url = 'https://productos-produceapirest.herokuapp.com/api/v1/productos';

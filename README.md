@@ -23,7 +23,7 @@ _Para esto cree un sitio WEB que consulta una API con los stock de productos, es
 * _Versión 1_
 
 ## Despliegue 📦
-* _https://productos-produceapirest.herokuapp.com_
+* _https://productos-consumeapirest.herokuapp.com/_
 
 ## Ejemplos 📋
 ### GET Productos

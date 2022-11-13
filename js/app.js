@@ -3,7 +3,7 @@
 //})
 
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/post-here/';
+var url = 'https://productos-produceapirest.herokuapp.com/api/v1/productos';
 var body = '<?xml version="1.0"?><person><name>Arun</name></person>';
 
 function callOtherDomain(){

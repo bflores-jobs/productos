@@ -31,17 +31,6 @@ const fetchData = async () => {
 // Pintar productos
 const pintarCards = data => {
     data.forEach(item => {
-        templateCategorys.querySelector('option').value = item.id
-        templateCard.querySelector('option').textContent = item.name
-        const clone = templateCard.cloneNode(true)
-        fragment.appendChild(clone)
-    })
-    categorys.appendChild(fragment)
-}
-
-// Pintar categorias
-const pintarCategorys = data => {
-    data.forEach(item => {
         templateCard.querySelector('img').src = item.url_image
         templateCard.querySelector('h5').textContent = item.name
         templateCard.getElementById('precio').textContent = item.price
@@ -51,6 +40,17 @@ const pintarCategorys = data => {
         fragment.appendChild(clone)
     })
     cards.appendChild(fragment)
+}
+
+// Pintar categorias
+const pintarCategorys = data => {
+    data.forEach(item => {
+        templateCategorys.querySelector('option').value = item.id
+        templateCategorys.querySelector('option').textContent = item.name
+        const clone = templateCategorys.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    categorys.appendChild(fragment)
 }
 
 

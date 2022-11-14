@@ -23,7 +23,7 @@ const fetchData = async () => {
     console.log(data)
     pintarCards(data)
     const res2 = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/categorias');
-    const data2 = await res.json()
+    const data2 = await res2.json()
     console.log(data2)
     pintarCategorys(data2)
 }

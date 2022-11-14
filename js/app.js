@@ -168,7 +168,13 @@ function handleChange() {
 }
 
 const fetchDataCat = async () => {
-    const category = document.getElementById('categorys').seletedIndex.value;
+    // Eliminando todos los hijos de un elemento
+    /*elemento var = document.getElementById("top");
+    while (element.firstChild) {
+    element.removeChild(element.firstChild);
+    
+    var value = document.getElementById("nums").selectedOptions[0].value;*/
+    const category = document.getElementById('categorys').selectedOptions[0].value;
     const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category);
     const data = await res.json()
     console.log(data)

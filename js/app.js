@@ -195,7 +195,7 @@ const fetchDataCat = async () => {
 // Buscar por nombre
 const btnBuscarNombre = async () => {
     var res = 0;
-    const name = document.getElementById('name').textContent;
+    const name = document.getElementById('name');
     const category = document.getElementById('categorys').selectedOptions[0].value;
     console.log(name);
 

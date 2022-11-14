@@ -2,6 +2,7 @@ const cards = document.getElementById('cards')
 const items = document.getElementById('items')
 const footer = document.getElementById('footer')
 const categorys = document.getElementById('categorys')
+const buscar = document.getElementById('button-addon2')
 const templateCard = document.getElementById('template-card').content
 const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
@@ -15,6 +16,7 @@ let carrito = {}
 document.addEventListener('DOMContentLoaded', e => { fetchData() });
 cards.addEventListener('click', e => { addCarrito(e) });
 items.addEventListener('click', e => { btnAumentarDisminuir(e) });
+buscar.addEventListener('click', e => { btnBuscarNombre() });
 
 
 // Traer productos
@@ -170,7 +172,7 @@ function handleChange() {
 const fetchDataCat = async () => {
     var res = 0;
     const element = document.getElementById("cards");
-    
+
     while (element.firstChild) {
         element.removeChild(element.firstChild);
     }
@@ -186,6 +188,24 @@ const fetchDataCat = async () => {
 
     const data = await res.json()
     console.log(data)
-    pintarCards(data)
-    
+    pintarCards(data)    
+}
+
+
+// Buscar por nombre
+const btnBuscarNombre = async () => {
+    var res = 0;
+    const name = document.getElementById('name').textContent;
+    const category = document.getElementById('categorys').selectedOptions[0].value;
+
+    if(name != ""){
+        if(category != 0){
+            res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category + '&name=' + name);
+        }else{
+            res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?name=' + name);
+        }
+        const data = await res.json()
+        console.log(data)
+        pintarCards(data)  
+    }
 }

@@ -14,7 +14,9 @@ let carrito = {}
 // El evento DOMContentLoaded es disparado cuando el documento HTML ha sido completamente cargado y parseado
 document.addEventListener('DOMContentLoaded', e => { fetchData() });
 cards.addEventListener('click', e => { addCarrito(e) });
-items.addEventListener('click', e => { btnAumentarDisminuir(e) })
+items.addEventListener('click', e => { btnAumentarDisminuir(e) });
+categorys.addEventListener()
+
 
 // Traer productos
 const fetchData = async () => {
@@ -52,6 +54,8 @@ const pintarCategorys = data => {
     })
     categorys.appendChild(fragment)
 }
+
+
 
 
 // Agregar al carrito
@@ -157,4 +161,18 @@ const btnAumentarDisminuir = e => {
         pintarCarrito()
     }
     e.stopPropagation()
+}
+
+
+function handleChange() {
+    fetchDataCat();
+}
+
+const fetchDataCat = async () => {
+    const category = document.getElementById('categorys').selectedValue;
+    const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category);
+    const data = await res.json()
+    console.log(data)
+    pintarCards(data)
+    
 }

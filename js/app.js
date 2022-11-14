@@ -168,19 +168,20 @@ function handleChange() {
 }
 
 const fetchDataCat = async () => {
-   
+    var res = 0;
     const element = document.getElementById("cards");
+    
     while (element.firstChild) {
         element.removeChild(element.firstChild);
     }
     
     const category = document.getElementById('categorys').selectedOptions[0].value;
     console.log(category);
-    
+
     if(category == 0){
-        const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos');
+        res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos');
     }else{
-        const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category);
+        res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category);
     }
 
     const data = await res.json()

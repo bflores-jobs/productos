@@ -25,7 +25,8 @@ const fetchData = async () => {
 // Pintar productos
 const pintarCards = data => {
     data.forEach(item => {
-        templateCard.querySelector('img').dataset.src = item.url_image
+        //templateCard.querySelector('img').src
+        templateCard.querySelector('img').src = item.url_image
         templateCard.querySelector('h5').textContent = item.name
         templateCard.querySelector('p').textContent = item.price
         templateCard.querySelector('p').textContent = item.discount

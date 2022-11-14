@@ -15,7 +15,6 @@ let carrito = {}
 document.addEventListener('DOMContentLoaded', e => { fetchData() });
 cards.addEventListener('click', e => { addCarrito(e) });
 items.addEventListener('click', e => { btnAumentarDisminuir(e) });
-categorys.addEventListener()
 
 
 // Traer productos

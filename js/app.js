@@ -52,7 +52,7 @@ const setCarrito = item => {
     const producto = {
         title: item.querySelector('h5').textContent,
         //precio: item.querySelector('p').textContent,
-        precio: item.getElementById('precio').textContent,
+        //precio: item.getElementById('precio').textContent,
         descuento: item.getElementById('descuento').textContent,
         id: item.querySelector('button').dataset.id,
         cantidad: 1

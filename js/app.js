@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchData = async () => {
     try {
-        const url = "https://productos-produceapirest.herokuapp.com/api/v1/productos"
+        const url = "https://productos-produceapirest.herokuapp.com/api/v1/categorias"
         var headers = {
             "Access-Control-Allow-Headers" : "Content-Type",
             "Access-Control-Allow-Origin": "hhttp://127.0.0.1:5500",

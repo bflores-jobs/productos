@@ -42,7 +42,7 @@ const addCarrito = e => {
     if (e.target.classList.contains('btn-dark')) {
         // console.log(e.target.dataset.id)
         // console.log(e.target.parentElement)
-        setCarrito(e.target.parentElement)
+        setCarrito(e.target.parentElement.parentElement)
     }
     e.stopPropagation()
 }
@@ -51,7 +51,9 @@ const setCarrito = item => {
     // console.log(item)
     const producto = {
         title: item.querySelector('h5').textContent,
-        precio: item.querySelector('p').textContent,
+        //precio: item.querySelector('p').textContent,
+        precio: item.getElementById('precio').textContent,
+        descuento: item.getElementById('descuento').textContent,
         id: item.querySelector('button').dataset.id,
         cantidad: 1
     }

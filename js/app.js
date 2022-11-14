@@ -75,7 +75,7 @@ const pintarCarrito = () => {
         templateCarrito.querySelector('th').textContent = producto.id
         templateCarrito.querySelectorAll('td')[0].textContent = producto.title
         templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
-        templateCarrito.querySelector('span').textContent = producto.precio * producto.cantidad
+        templateCarrito.querySelector('span').textContent = producto.precio * (producto.cantidad - producto.descuento)
         
         //botones
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id

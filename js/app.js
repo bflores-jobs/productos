@@ -197,6 +197,7 @@ const btnBuscarNombre = async () => {
     var res = 0;
     const name = document.getElementById('name').textContent;
     const category = document.getElementById('categorys').selectedOptions[0].value;
+    console.log('buscar nombre');
 
     if(name != ""){
         const element = document.getElementById("cards");

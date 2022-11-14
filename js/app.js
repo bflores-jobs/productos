@@ -72,7 +72,6 @@ const setCarrito = item => {
     const producto = {
         title: item.querySelector('h5').textContent,
         precio: item.querySelector('p').textContent,
-        //precio: item.getElementById('precio').textContent,
         precio: item.querySelectorAll('span')[0].textContent,
         descuento: item.querySelectorAll('span')[1].textContent,
         id: item.querySelector('button').dataset.id,
@@ -168,12 +167,12 @@ function handleChange() {
 }
 
 const fetchDataCat = async () => {
-    // Eliminando todos los hijos de un elemento
-    /*elemento var = document.getElementById("top");
+   
+    const element = document.getElementById("cards");
     while (element.firstChild) {
-    element.removeChild(element.firstChild);
+        element.removeChild(element.firstChild);
+    }
     
-    var value = document.getElementById("nums").selectedOptions[0].value;*/
     const category = document.getElementById('categorys').selectedOptions[0].value;
     const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category);
     const data = await res.json()

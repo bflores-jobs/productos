@@ -162,6 +162,7 @@ const btnAumentarDisminuir = e => {
 }
 
 
+// Por categoria
 function handleChange() {
     fetchDataCat();
 }
@@ -174,7 +175,12 @@ const fetchDataCat = async () => {
     }
     
     const category = document.getElementById('categorys').selectedOptions[0].value;
-    const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category);
+    if(category == 0){
+        const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=');
+    }else{
+        const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category);
+    }
+        
     const data = await res.json()
     console.log(data)
     pintarCards(data)

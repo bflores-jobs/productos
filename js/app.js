@@ -199,6 +199,10 @@ const btnBuscarNombre = async () => {
     const category = document.getElementById('categorys').selectedOptions[0].value;
 
     if(name != ""){
+        const element = document.getElementById("cards");
+        while (element.firstChild) {
+            element.removeChild(element.firstChild);
+        }
         if(category != 0){
             res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category + '&name=' + name);
         }else{

@@ -176,6 +176,7 @@ const fetchDataCat = async () => {
     
     const category = document.getElementById('categorys').selectedOptions[0].value;
     console.log(category);
+    
     if(category == 0){
         const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos');
     }else{

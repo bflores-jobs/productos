@@ -8,34 +8,6 @@ const fragment = document.createDocumentFragment()
 let carrito = {}
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    fetchData()
-})
-
-const fetchData = async () => {
-    try {
-        const url = "https://productos-produceapirest.herokuapp.com/api/v1/categorias"
-        var headers = {
-            "Access-Control-Allow-Headers" : "Content-Type",
-            "Access-Control-Allow-Origin": "hhttp://127.0.0.1:5500",
-            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
-            "Content-Type": "application/json"
-        }
-
-        const res = await fetch(url, {
-            method : "GET",
-            mode: 'cors',
-            headers: headers
-        })
-        const data = await res.json()
-        console.log(data)
-        
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-/*
 // Eventos
 // El evento DOMContentLoaded es disparado cuando el documento HTML ha sido completamente cargado y parseado
 document.addEventListener('DOMContentLoaded', e => { fetchData() });
@@ -163,5 +135,35 @@ const btnAumentarDisminuir = e => {
         pintarCarrito()
     }
     e.stopPropagation()
+}
+
+
+
+/*
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData()
+})
+
+const fetchData = async () => {
+    try {
+        const url = "https://productos-produceapirest.herokuapp.com/api/v1/productos"
+        var headers = {
+            "Access-Control-Allow-Headers" : "Content-Type",
+            "Access-Control-Allow-Origin": "hhttp://127.0.0.1:5500",
+            "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
+            "Content-Type": "application/json"
+        }
+
+        const res = await fetch(url, {
+            method : "GET",
+            mode: 'cors',
+            headers: headers
+        })
+        const data = await res.json()
+        console.log(data)
+        
+    } catch (error) {
+        console.log(error)
+    }
 }
 */

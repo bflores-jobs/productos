@@ -54,7 +54,7 @@ const setCarrito = item => {
         precio: item.querySelector('p').textContent,
         //precio: item.getElementById('precio').textContent,
         precio: item.querySelector('span').textContent,
-        descuento: item.getElementById('descuento').textContent,
+        descuento: item.querySelector('span').textContent,
         id: item.querySelector('button').dataset.id,
         cantidad: 1
     }

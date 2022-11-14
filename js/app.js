@@ -176,11 +176,11 @@ const fetchDataCat = async () => {
     
     const category = document.getElementById('categorys').selectedOptions[0].value;
     if(category == 0){
-        const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=');
+        const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos');
     }else{
         const res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category);
     }
-        
+
     const data = await res.json()
     console.log(data)
     pintarCards(data)

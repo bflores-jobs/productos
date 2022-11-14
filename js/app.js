@@ -42,7 +42,7 @@ const addCarrito = e => {
     if (e.target.classList.contains('btn-dark')) {
         // console.log(e.target.dataset.id)
         // console.log(e.target.parentElement)
-        setCarrito(e.target.parentElement.parentElement)
+        setCarrito(e.target.parentElement)
     }
     e.stopPropagation()
 }

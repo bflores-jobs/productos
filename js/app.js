@@ -28,9 +28,11 @@ const pintarCards = data => {
         //templateCard.querySelector('img').src
         templateCard.querySelector('img').src = item.url_image
         templateCard.querySelector('h5').textContent = item.name
-        //templateCard.getElementById()
-        templateCard.querySelector('p').textContent = item.price
-        templateCard.querySelector('p').textContent = item.discount
+        templateCard.getElementById('precio').textContent = item.price
+        templateCard.getElementById('descuento').textContent = item.discount
+        
+        //templateCard.querySelector('p').textContent = item.price
+        //templateCard.querySelector('p').textContent = item.discount
         templateCard.querySelector('button').dataset.id = item.id
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)

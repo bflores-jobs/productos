@@ -200,6 +200,7 @@ const btnBuscarNombre = async () => {
     console.log('buscar nombre');
 
     if(name != ""){
+        console.log('buscar nombre en el if');
         const element = document.getElementById("cards");
         while (element.firstChild) {
             element.removeChild(element.firstChild);

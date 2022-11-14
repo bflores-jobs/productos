@@ -208,6 +208,7 @@ const btnBuscarNombre = async () => {
         if(category != 0){
             res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?category=' + category + '&name=' + name);
         }else{
+            console.log('buscar nombre en el else');
             res = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/productos?name=' + name);
         }
         const data = await res.json()

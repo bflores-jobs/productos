@@ -25,8 +25,10 @@ const fetchData = async () => {
 // Pintar productos
 const pintarCards = data => {
     data.forEach(item => {
-        templateCard.querySelector('h5').textContent = item.title
-        templateCard.querySelector('p').textContent = item.precio
+        templateCard.querySelector('img').textContent = item.url_image
+        templateCard.querySelector('h5').textContent = item.name
+        templateCard.querySelector('p').textContent = item.price
+        templateCard.querySelector('p').textContent = item.discount
         templateCard.querySelector('button').dataset.id = item.id
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)

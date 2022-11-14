@@ -1,9 +1,11 @@
 const cards = document.getElementById('cards')
 const items = document.getElementById('items')
 const footer = document.getElementById('footer')
+const categorys = document.getElementById('categorys')
 const templateCard = document.getElementById('template-card').content
 const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
+const templateCategorys = document.getElementById('template-categorys').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
 
@@ -20,10 +22,25 @@ const fetchData = async () => {
     const data = await res.json()
     console.log(data)
     pintarCards(data)
+    const res2 = await fetch('https://productos-produceapirest.herokuapp.com/api/v1/categorias');
+    const data2 = await res.json()
+    console.log(data2)
+    pintarCategorys(data2)
 }
 
 // Pintar productos
 const pintarCards = data => {
+    data.forEach(item => {
+        templateCategorys.querySelector('option').value = item.id
+        templateCard.querySelector('option').textContent = item.name
+        const clone = templateCard.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    categorys.appendChild(fragment)
+}
+
+// Pintar categorias
+const pintarCategorys = data => {
     data.forEach(item => {
         templateCard.querySelector('img').src = item.url_image
         templateCard.querySelector('h5').textContent = item.name
